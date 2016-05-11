@@ -1,6 +1,6 @@
 {
   "name": "split-text-middle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Splits text in the middle, tries to look for space, comma or dot.",
   "main": "index.js",
   "scripts": {

@@ -1,10 +1,10 @@
 (function() {
   module.exports = function(text) {
-    var after, before, findSeparator, halfOfText, halfOfTextLength, middle, middleOfText;
+    var after, before, halfOfText, halfOfTextLength, middle, middleOfText, separator;
     halfOfTextLength = Math.floor(text.length / 2);
     halfOfText = text.substr(0, halfOfTextLength);
-    findSeparator = halfOfText.match(/[,|;|.]\s+/gi);
-    middleOfText = findSeparator ? halfOfText.lastIndexOf(findSeparator[Math.floor(findSeparator.length - 1)]) : Math.floor(halfOfTextLength);
+    separator = halfOfText.match(/[,|;|.]\s+/gi);
+    middleOfText = separator ? halfOfText.lastIndexOf(separator[Math.floor(separator.length - 1)]) : Math.floor(halfOfTextLength);
     before = text.lastIndexOf(' ', middleOfText);
     after = text.indexOf(' ', middleOfText + 1);
     middle = before === -1 || after !== -1 && middleOfText - before >= after - middleOfText ? after : before;
